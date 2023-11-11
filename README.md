@@ -7,6 +7,13 @@
 
 Data Analysis with SQL
 
+## Table of Contents
+
+[1.- Context](#1--context)
+[2.- Codeflix Subscriber Data Sample and Queries](#2--codeflix-subscriber-data-sample-and-queries)
+[3.- Calculate Churn Rates for each segment](#3--calculate-churn-rates-for-each-segment)
+[4.- Visualization for gained and lost subscribers per month](#4--visualization-for-gained-and-lost-subscribers-per-month)
+
 ## 1.- Context
 
 Four months into launching Codeflix, management asks you to look into
@@ -220,7 +227,7 @@ to 35% making it’s maximum in March 2017. Since segment 87 is losing
 subscriber 4 times faster as segment 30 something has to be done to
 reverse this trend.
 
-## 3.- Visualization for gained and lost subscribers per month
+## 4.- Visualization for gained and lost subscribers per month
 
 Let's get the total of subscribers gained or lost by month:
 
@@ -266,6 +273,7 @@ GROUP BY month;
 
 ![image](https://github.com/jlgarciatucci/SQL-Calculating-Churn-Rates/assets/98712473/7695bcf4-967b-4b2e-973c-419061e0b112)
 
+[Back to Top](#top)
 
 
 
