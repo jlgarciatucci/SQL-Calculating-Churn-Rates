@@ -222,6 +222,51 @@ reverse this trend.
 
 ## 3.- Visualization for gained and lost subscribers per month
 
+Let's get the total of subscribers gained or lost by month:
+
+**Gained subscribers by month**
+
+```sql
+-- SQL Query
+SELECT
+  SUBSTR(subscription_start,1,7) as month,
+  COUNT(SUBSTR(subscription_start,1,7)) as gained_subcribers
+FROM subscriptions
+GROUP BY month;
+```
+
+**Lost subscribers by month**
+
+```sql
+-- SQL Query
+SELECT
+  SUBSTR(IFNULL(subscription_end,'2016-12'),1,7) as month,
+  COUNT(SUBSTR(subscription_end,1,7)) as lost_subscribers
+FROM subscriptions
+GROUP BY month;
+```
+
+**Query Results:**
+
+| month    | gained_subscribers |
+|----------|--------------------|
+| 2016-12  | 570                |
+| 2017-01  | 507                |
+| 2017-02  | 460                |
+| 2017-03  | 463                |
+
+**Churn Rates**
+
+| Month   | Segment 30 |
+|---------|------------|
+| 2016-12 | 0          |
+| 2017-01 | 92         |
+| 2017-02 | 186        |
+| 2017-03 | 342        |
+
+![image](https://github.com/jlgarciatucci/SQL-Calculating-Churn-Rates/assets/98712473/7695bcf4-967b-4b2e-973c-419061e0b112)
+
+
 
 
 
