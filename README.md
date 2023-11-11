@@ -10,9 +10,13 @@ Data Analysis with SQL
 ## Table of Contents
 
 [1.- Context](#1--context)
+
 [2.- Codeflix Subscriber Data Sample and Queries](#2--codeflix-subscriber-data-sample-and-queries)
+
 [3.- Calculate Churn Rates for each segment](#3--calculate-churn-rates-for-each-segment)
+
 [4.- Visualization for gained and lost subscribers per month](#4--visualization-for-gained-and-lost-subscribers-per-month)
+
 
 ## 1.- Context
 
