@@ -40,12 +40,12 @@ Data in the table goes from 2016-12-01 up to 2017-03-30.
 
 Let's query the first 15 lines from the subscription table:
 
-`````
+```sql
 -- SQL Query
 SELECT *
 FROM subscriptions
 LIMIT 15;
-`````
+```
 
 **Query Resutls:**
 
@@ -84,7 +84,8 @@ For calculating the churn rates let's create some temporary tables:
 
 **1.- months temporary table**
 
-`````
+```sql
+-- SQL Query
 WITH months AS (
 SELECT
 '2017-01-01' AS first_day,
@@ -98,7 +99,7 @@ SELECT
 '2017-03-01' AS first_day,
 '2017-03-31' AS last_day
 ),
-`````
+```
 
 
 
