@@ -199,6 +199,33 @@ SELECT
   100.0 * sum_canceled_87 / sum_active_87 AS churn_rate_87
 FROM status_aggregate;
 ```
+**Query results:**
+
+| month      | churn_rate_30   | churn_rate_87   |
+|------------|-----------------|-----------------|
+| 2017-01-01 | 7.56013745704467| 25.1798561151079|
+| 2017-02-01 | 7.33590733590734| 32.034632034632 |
+| 2017-03-01 | 11.731843575419 | 48.5875706214689|
+
+**Churn Rates**
+
+| Month     | Segment 30 | Segment 87 |
+|-----------|------------|------------|
+| Jan 2017  | 7.56 %     | 25.18 %    |
+| Feb 2017  | 7.34 %     | 32.03 %    |
+| Mar 2017  | 11.73 %    | 48.59 %    |
+
+Churn rates average for segment 30 is 9% whether for segment 87 is up
+to 35% making it’s maximum in March 2017. Since segment 87 is losing
+subscriber 4 times faster as segment 30 something has to be done to
+reverse this trend.
+
+## 3.- Visualization for gained and lost subscribers per month
+
+
+
+
+
 
 
 
