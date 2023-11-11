@@ -69,8 +69,6 @@ LIMIT 15;
 
 **Database Schema: Subscription**
 
-<div align="center">
-
 | name                | type    |
 |---------------------|---------|
 | id                  | INTEGER |
@@ -80,7 +78,27 @@ LIMIT 15;
 
 Rows: 2000
 
-</div>
+## 3.- Calculate Churn Rates for each segment
+
+For calculating the churn rates let's create some temporary tables:
+
+**1.- months temporary table**
+
+`````
+WITH months AS (
+SELECT
+'2017-01-01' AS first_day,
+'2017-01-31' AS last_day
+UNION
+SELECT
+'2017-02-01' AS first_day,
+'2017-02-28' AS last_day
+UNION
+SELECT
+'2017-03-01' AS first_day,
+'2017-03-31' AS last_day
+),
+`````
 
 
 
