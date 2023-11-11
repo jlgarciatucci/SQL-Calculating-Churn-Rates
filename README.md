@@ -179,6 +179,27 @@ status AS (
 FROM cross_join
 ```
 
+**5.- Aggregating the sum of active and cancelled subscriptions by month, and calculation of the churn rates in percentage multiplying by 100**
+
+```sql
+-- SQL Query
+status_aggregate AS (
+  SELECT
+    month,
+    SUM(is_active_87) AS sum_active_87,
+    SUM(is_active_30) AS sum_active_30,
+    SUM(is_canceled_87) AS sum_canceled_87,
+    SUM(is_canceled_30) AS sum_canceled_30
+  FROM status
+  GROUP BY month
+)
+SELECT
+  month,
+  100.0 * sum_canceled_30 / sum_active_30 AS churn_rate_30,
+  100.0 * sum_canceled_87 / sum_active_87 AS churn_rate_87
+FROM status_aggregate;
+```
+
 
 
 
